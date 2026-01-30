@@ -12,6 +12,7 @@ import {
 import Header from "./components/Header";
 import DailyCheckinCard from "./components/DailyChecking";
 import BitcoinStampMint from "./components/BitcoinStampMint ";
+import MemeTokenDeploy from "./components/MemeTokenDeploy";
 
 function App() {
   const [address, setAddress] = useState(() => {
@@ -55,6 +56,12 @@ function App() {
         />
 
         <BitcoinStampMint
+          userAddress={address}
+          setUserAddress={setAddress}
+          connectWallet={connectWallet}
+        />
+
+        <MemeTokenDeploy
           userAddress={address}
           setUserAddress={setAddress}
           connectWallet={connectWallet}

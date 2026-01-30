@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.mainnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: meme-token
+            expected-sender: SP1K2XGT5RNGT42N49BH936VDF8NXWNZJY15BPV4F
+            cost: 16100
+            path: "contracts\\meme-token.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
